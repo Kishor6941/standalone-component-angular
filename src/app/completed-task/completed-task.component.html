@@ -1,0 +1,70 @@
+<div class="main-table col-md-12">
+  <div class="container">
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Full Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ firstName() }}</td>
+            <td>{{ lastName() }}</td>
+            <td>{{ fullName() }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-md-12">
+      <div class="row">
+        <div class="form-group col-md-6 mt-2">
+          <label class="fw-bold">FirstName</label>
+          <input type="text" class="form-control" #first />
+          <div class="mt-2">
+            <button
+              class="btn btn-success"
+              (click)="changeFirstName(first.value)"
+            >
+              Change First Name
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group col-md-6 mt-2">
+          <label class="fw-bold">lastName</label>
+          <input type="text" class="form-control" #last />
+          <div class="mt-2">
+            <button
+              class="btn btn-success"
+              (click)="changeLastName(last.value)"
+            >
+              Change Last Name
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <div class="formGroup">
+        <div class="row">
+          <div class="col-md-1">
+            <button class="btn btn-danger" (click)="dec()" [disabled]="qty() === 0">-</button>
+            
+          </div>      
+          <div class="col-md-1">
+            <span>{{qty()}}</span>
+          </div>
+          <div class="col-md-1">
+            <button class="btn btn-success" (click)="inc()">+</button>
+          </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div></div>
